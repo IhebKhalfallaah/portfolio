@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #0d0d0d;
+  --bg-elevated: #121212;
+  --surface: #161616;
+  --surface-2: #1a1a1a;
+  --border: #2a2a2a;
+  --border-glow: rgba(255, 140, 0, 0.45);
+  --text: #ffffff;
+  --text-muted: #888888;
+  --text-dim: #666666;
+  --orange: #ff8c00;
+  --orange-hot: #ff4500;
+  --orange-soft: #ff7b54;
+  --blue: #4ca9ff;
+  --blue-bright: #00bfff;
+  --green: #50fa7b;
+  --green-status: #00ff00;
+  --magenta: #da70d6;
+  --yellow-hash: #f0e070;
+  --git-green: #3fb950;
+  --git-red: #f85149;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--text);
+  background-color: var(--bg);
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+.font-mono-port {
+  font-family: var(--font-mono), ui-monospace, monospace;
+}
+
+/* Orange-tinted grid + vignette (reference hero) */
+.bg-portfolio {
+  background-color: var(--bg);
+  background-image: radial-gradient(
+      ellipse 80% 60% at 50% 40%,
+      transparent 40%,
+      rgba(0, 0, 0, 0.55) 100%
+    ),
+    linear-gradient(
+      rgba(180, 90, 30, 0.07) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(180, 90, 30, 0.07) 1px,
+      transparent 1px
+    );
+  background-size: 100% 100%, 48px 48px, 48px 48px;
+}
+
+.text-gradient-name {
+  background: linear-gradient(90deg, var(--orange-hot), var(--blue));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.shadow-orange-glow {
+  box-shadow: 0 0 20px rgba(255, 140, 0, 0.25),
+    0 0 40px rgba(255, 140, 0, 0.08);
+}
+
+.shadow-card-dual {
+  box-shadow: -4px 0 24px rgba(255, 100, 0, 0.12),
+    4px 0 24px rgba(76, 169, 255, 0.12);
+}
